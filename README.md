@@ -1,4 +1,4 @@
-#Demo
+## Demo
 
 demo visible at http://calwen.com/crowdfunding/
 
