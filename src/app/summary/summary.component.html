@@ -1,0 +1,24 @@
+<md-card class="card-spacing">
+  <md-card-title>{{data.title}}
+    <div class="status center-block">
+      <span class="glyphicon glyphicon-flag"></span><span class="status-spacer"><strong> GOAL:</strong> {{data.goal | currency:data.currency:true}}</span>
+      <span class="glyphicon glyphicon-signal"></span><span class="status-spacer"><strong> RAISED:</strong> {{data.raised | currency:data.currency:true}}</span>
+      <span class="glyphicon glyphicon-time"></span><span class="status-spacer"><strong> END TIME:</strong> {{data.end_time | date:"medium"}}</span>
+    </div>
+
+  </md-card-title>
+
+  <md-card-content>
+    <div *ngIf="!showMore"><p>{{data.description_summary}}...</p><span><button (click)="doShowMore()"
+                                                                               class="btn-xs default">show more</button></span>
+    </div>
+    <div *ngIf="showMore">
+      <div id="description" [innerHTML]="data.description"></div>
+      <span><button (click)="doShowMore()" class="btn-xs default">show less</button></span></div>
+  </md-card-content>
+  <md-card-actions></md-card-actions>
+  <md-card-footer>
+    <button md-button><a [href]="data.url" target="_blank">Visit</a></button>
+  </md-card-footer>
+</md-card>
+

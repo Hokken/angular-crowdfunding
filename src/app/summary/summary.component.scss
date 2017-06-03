@@ -1,0 +1,42 @@
+
+md-card-footer {
+  background-color: #f3f3f3;
+}
+
+md-card {
+  padding:0;
+
+}
+
+.card-spacing {
+  margin-bottom:30px;
+}
+
+.status {
+  padding:5px;
+  font-size:16px;
+  color:white;
+  background-color: #54616e;
+}
+
+#description {
+  text-align: left;
+}
+
+md-card-content{
+  padding:0px 20px 0px 20px;
+}
+
+md-card-title {
+  background-color: slategray;
+  color:#fff;
+  padding:0;
+}
+
+md-card-actions {
+ height:40px;
+}
+
+.status-spacer {
+  margin-right:10px
+}

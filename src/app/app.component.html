@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="text-center col-md-12">
+      <h1>Crowdfunding example</h1>
+    </div>
+  </div>
+<hr>
+  <div class="row">
+    <div class="text-center col-md-12">
+      <app-toolbar (selectedChange)="setSelected($event)" (toggleRaisedChange)="setRaisedChange($event)" (toggleEndTimeChange)="setEndTimeChange($event)" class="text-center"></app-toolbar>
+    </div>
+    <div *ngFor="let summary of summaries | sort:selectedValue:raised:endTime" class="text-center col-md-12">
+      <app-summary [data]="summary"></app-summary>
+    </div>
+  </div>
+</div>
