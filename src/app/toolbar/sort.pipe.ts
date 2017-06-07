@@ -34,10 +34,21 @@ export class SortPipe implements PipeTransform {
     }
 
     if (endTimeToggle != null) {
+
       results.sort((item1, item2) => {
+
+
+        if(item1.end_time === undefined){
+          return endTimeToggle ? 1 : -1;
+        }
+
+        if(item2.end_time === undefined){
+          return endTimeToggle ? -1 : 1;
+        }
 
         const d1 = Date.parse(item1.end_time);
         const d2 = Date.parse(item2.end_time);
+
 
         if (d1 < d2) {
           return endTimeToggle ? 1 : -1;
