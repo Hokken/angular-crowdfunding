@@ -11,7 +11,9 @@ export class SummaryComponent implements OnInit {
   @Input() data:any;
   showMore:boolean;
 
-  constructor() { }
+  constructor() {
+    this.data={};
+  }
 
   ngOnInit() {
 

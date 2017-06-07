@@ -9,8 +9,9 @@
   </md-card-title>
 
   <md-card-content>
-    <div *ngIf="!showMore"><p>{{data.description_summary}}...</p><span><button (click)="doShowMore()"
-                                                                               class="btn-xs default">show more</button></span>
+    <div *ngIf="!showMore">
+      <p>{{data.description_summary}}...</p>
+      <span><button (click)="doShowMore()" class="btn-xs default">show more</button></span>
     </div>
     <div *ngIf="showMore">
       <div id="description" [innerHTML]="data.description"></div>

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SummaryComponent } from './summary.component';
+import {MdButtonModule, MdCardModule, MdGridListModule, MdSelectModule} from "@angular/material";
 
 describe('CfSummaryComponent', () => {
   let component: SummaryComponent;
@@ -8,7 +9,13 @@ describe('CfSummaryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SummaryComponent ]
+      declarations: [ SummaryComponent ],
+      imports:[
+        MdSelectModule,
+        MdButtonModule,
+        MdCardModule,
+        MdGridListModule,
+      ]
     })
     .compileComponents();
   }));
